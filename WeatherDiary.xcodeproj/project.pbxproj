@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8524855928A7867F00222961 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8524855828A7867F00222961 /* .gitignore */; };
 		8537521628A6436C00769D74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537521528A6436C00769D74 /* AppDelegate.swift */; };
 		8537521828A6436C00769D74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537521728A6436C00769D74 /* SceneDelegate.swift */; };
 		8537521A28A6436C00769D74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537521928A6436C00769D74 /* ViewController.swift */; };
 		8537521D28A6436C00769D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8537521B28A6436C00769D74 /* Main.storyboard */; };
 		8537521F28A6436D00769D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8537521E28A6436D00769D74 /* Assets.xcassets */; };
 		8537522228A6436D00769D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8537522028A6436D00769D74 /* LaunchScreen.storyboard */; };
+		8537522A28A6449700769D74 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8537522928A6449700769D74 /* Documentation.docc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8524855828A7867F00222961 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8537521228A6436C00769D74 /* WeatherDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8537521528A6436C00769D74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8537521728A6436C00769D74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8537521E28A6436D00769D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8537522128A6436D00769D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8537522328A6436D00769D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8537522928A6449700769D74 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,9 +41,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8524855A28A786B600222961 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
 		8537520928A6436C00769D74 = {
 			isa = PBXGroup;
 			children = (
+				8524855828A7867F00222961 /* .gitignore */,
+				8537522928A6449700769D74 /* Documentation.docc */,
 				8537521428A6436C00769D74 /* WeatherDiary */,
 				8537521328A6436C00769D74 /* Products */,
 			);
@@ -56,6 +69,7 @@
 		8537521428A6436C00769D74 /* WeatherDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8524855A28A786B600222961 /* Key */,
 				8537521528A6436C00769D74 /* AppDelegate.swift */,
 				8537521728A6436C00769D74 /* SceneDelegate.swift */,
 				8537521928A6436C00769D74 /* ViewController.swift */,
@@ -125,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8524855928A7867F00222961 /* .gitignore in Resources */,
 				8537522228A6436D00769D74 /* LaunchScreen.storyboard in Resources */,
 				8537521F28A6436D00769D74 /* Assets.xcassets in Resources */,
 				8537521D28A6436C00769D74 /* Main.storyboard in Resources */,
@@ -141,6 +156,7 @@
 				8537521A28A6436C00769D74 /* ViewController.swift in Sources */,
 				8537521628A6436C00769D74 /* AppDelegate.swift in Sources */,
 				8537521828A6436C00769D74 /* SceneDelegate.swift in Sources */,
+				8537522A28A6449700769D74 /* Documentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

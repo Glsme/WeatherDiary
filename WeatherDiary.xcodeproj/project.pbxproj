@@ -22,6 +22,7 @@
 		8537521F28A6436D00769D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8537521E28A6436D00769D74 /* Assets.xcassets */; };
 		8537522228A6436D00769D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8537522028A6436D00769D74 /* LaunchScreen.storyboard */; };
 		8537522A28A6449700769D74 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8537522928A6449700769D74 /* Documentation.docc */; };
+		8552634828A7E2670048C9D4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634728A7E2670048C9D4 /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8537522128A6436D00769D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8537522328A6436D00769D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8537522928A6449700769D74 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		8552634728A7E2670048C9D4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		8537521428A6436C00769D74 /* WeatherDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8552634628A7E24B0048C9D4 /* Model */,
 				8524856B28A7A4E900222961 /* Resource */,
 				8524856828A7902000222961 /* APIManager */,
 				8524855F28A788BE00222961 /* Weather */,
@@ -122,6 +125,14 @@
 				8537522328A6436D00769D74 /* Info.plist */,
 			);
 			path = WeatherDiary;
+			sourceTree = "<group>";
+		};
+		8552634628A7E24B0048C9D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8552634728A7E2670048C9D4 /* Font.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				8524856A28A7915700222961 /* OpenWeatherMapAPIManager.swift in Sources */,
 				8537521628A6436C00769D74 /* AppDelegate.swift in Sources */,
 				8524855E28A7889E00222961 /* WeatherViewController.swift in Sources */,
+				8552634828A7E2670048C9D4 /* Font.swift in Sources */,
 				8537521828A6436C00769D74 /* SceneDelegate.swift in Sources */,
 				8537522A28A6449700769D74 /* Documentation.docc in Sources */,
 				8524855C28A786DA00222961 /* APIKey.swift in Sources */,

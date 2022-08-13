@@ -14,7 +14,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.font = UIFont(name: "NotoSansKR-Bold", size: 20)
+        label.font = UIFont(name: Font.NotoSansMedium, size: 20)
         
         OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: 37.592682, lon: 127.016479)
     }

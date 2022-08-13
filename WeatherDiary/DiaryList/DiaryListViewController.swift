@@ -24,7 +24,7 @@ class DiaryListViewController: UIViewController {
 
 extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return DiaryDataManager.shared.diaryList.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,7 +35,7 @@ extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        let spacing: CGFloat = 8
+        let spacing: CGFloat = 16
         let width = UIScreen.main.bounds.width - (spacing * 3)
         layout.itemSize = CGSize(width: width / 2, height: width / 2)
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)

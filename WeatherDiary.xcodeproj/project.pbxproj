@@ -29,6 +29,8 @@
 		8552635228A7E48B0048C9D4 /* ReusableViewProtocolswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552635128A7E48B0048C9D4 /* ReusableViewProtocolswift.swift */; };
 		8552635C28A7E7D60048C9D4 /* DiaryListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552635A28A7E7D60048C9D4 /* DiaryListCollectionViewCell.swift */; };
 		8552635D28A7E7D60048C9D4 /* DiaryListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8552635B28A7E7D60048C9D4 /* DiaryListCollectionViewCell.xib */; };
+		8552636228A7F0AF0048C9D4 /* DiaryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552636128A7F0AF0048C9D4 /* DiaryDataManager.swift */; };
+		8552636428A7F10E0048C9D4 /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552636328A7F10E0048C9D4 /* DiaryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		8552635128A7E48B0048C9D4 /* ReusableViewProtocolswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocolswift.swift; sourceTree = "<group>"; };
 		8552635A28A7E7D60048C9D4 /* DiaryListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListCollectionViewCell.swift; sourceTree = "<group>"; };
 		8552635B28A7E7D60048C9D4 /* DiaryListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryListCollectionViewCell.xib; sourceTree = "<group>"; };
+		8552636128A7F0AF0048C9D4 /* DiaryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataManager.swift; sourceTree = "<group>"; };
+		8552636328A7F10E0048C9D4 /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +129,12 @@
 		8537521428A6436C00769D74 /* WeatherDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8552635F28A7F0890048C9D4 /* Manager */,
 				8552635328A7E77D0048C9D4 /* View */,
 				8552635028A7E4460048C9D4 /* Protocol */,
 				8552634928A7E3870048C9D4 /* DiaryList */,
 				8552634628A7E24B0048C9D4 /* Model */,
 				8524856B28A7A4E900222961 /* Resource */,
-				8524856828A7902000222961 /* APIManager */,
 				8524855F28A788BE00222961 /* Weather */,
 				8524855A28A786B600222961 /* Key */,
 				8537521528A6436C00769D74 /* AppDelegate.swift */,
@@ -147,6 +151,7 @@
 			children = (
 				8552634728A7E2670048C9D4 /* Font.swift */,
 				8552634C28A7E3D80048C9D4 /* StoryboardName.swift */,
+				8552636328A7F10E0048C9D4 /* DiaryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +180,23 @@
 				8552635B28A7E7D60048C9D4 /* DiaryListCollectionViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8552635F28A7F0890048C9D4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8552636028A7F09C0048C9D4 /* DataManager */,
+				8524856828A7902000222961 /* APIManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8552636028A7F09C0048C9D4 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				8552636128A7F0AF0048C9D4 /* DiaryDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,12 +289,14 @@
 				8524856A28A7915700222961 /* OpenWeatherMapAPIManager.swift in Sources */,
 				8537521628A6436C00769D74 /* AppDelegate.swift in Sources */,
 				8524855E28A7889E00222961 /* WeatherViewController.swift in Sources */,
+				8552636228A7F0AF0048C9D4 /* DiaryDataManager.swift in Sources */,
 				8552634828A7E2670048C9D4 /* Font.swift in Sources */,
 				8537521828A6436C00769D74 /* SceneDelegate.swift in Sources */,
 				8552634D28A7E3D80048C9D4 /* StoryboardName.swift in Sources */,
 				8537522A28A6449700769D74 /* Documentation.docc in Sources */,
 				8552634F28A7E42F0048C9D4 /* DiaryListViewController.swift in Sources */,
 				8524855C28A786DA00222961 /* APIKey.swift in Sources */,
+				8552636428A7F10E0048C9D4 /* DiaryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +449,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "날씨일기장";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Weather;
+				INFOPLIST_KEY_UIMainStoryboardFile = DiaryList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -456,7 +480,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "날씨일기장";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Weather;
+				INFOPLIST_KEY_UIMainStoryboardFile = DiaryList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

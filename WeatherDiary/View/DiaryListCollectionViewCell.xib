@@ -32,6 +32,9 @@
                 <constraint firstItem="cRG-jW-mgm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cWO-xr-7jM"/>
             </constraints>
             <size key="customSize" width="277" height="251"/>
+            <connections>
+                <outlet property="backView" destination="cRG-jW-mgm" id="Ljb-D0-RC5"/>
+            </connections>
             <point key="canvasLocation" x="296.37681159420293" y="195.87053571428569"/>
         </collectionViewCell>
     </objects>

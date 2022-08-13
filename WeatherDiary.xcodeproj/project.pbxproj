@@ -14,6 +14,8 @@
 		8524856428A78F4E00222961 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8524856328A78F4E00222961 /* Alamofire */; };
 		8524856728A78F6900222961 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8524856628A78F6900222961 /* SwiftyJSON */; };
 		8524856A28A7915700222961 /* OpenWeatherMapAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8524856928A7915700222961 /* OpenWeatherMapAPIManager.swift */; };
+		8524856E28A7A6BD00222961 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8524856C28A7A6BD00222961 /* NotoSansKR-Bold.otf */; };
+		8524856F28A7A6BD00222961 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8524856D28A7A6BD00222961 /* NotoSansKR-Medium.otf */; };
 		8537521628A6436C00769D74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537521528A6436C00769D74 /* AppDelegate.swift */; };
 		8537521828A6436C00769D74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537521728A6436C00769D74 /* SceneDelegate.swift */; };
 		8537521D28A6436C00769D74 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8537521B28A6436C00769D74 /* Weather.storyboard */; };
@@ -28,6 +30,8 @@
 		8524855D28A7889E00222961 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		8524856028A78E3C00222961 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		8524856928A7915700222961 /* OpenWeatherMapAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapAPIManager.swift; sourceTree = "<group>"; };
+		8524856C28A7A6BD00222961 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		8524856D28A7A6BD00222961 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		8537521228A6436C00769D74 /* WeatherDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8537521528A6436C00769D74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8537521728A6436C00769D74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,15 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
+		8524856B28A7A4E900222961 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8524856C28A7A6BD00222961 /* NotoSansKR-Bold.otf */,
+				8524856D28A7A6BD00222961 /* NotoSansKR-Medium.otf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8537520928A6436C00769D74 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 		8537521428A6436C00769D74 /* WeatherDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8524856B28A7A4E900222961 /* Resource */,
 				8524856828A7902000222961 /* APIManager */,
 				8524855F28A788BE00222961 /* Weather */,
 				8524855A28A786B600222961 /* Key */,
@@ -176,10 +190,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8524856F28A7A6BD00222961 /* NotoSansKR-Medium.otf in Resources */,
 				8524855928A7867F00222961 /* .gitignore in Resources */,
 				8537522228A6436D00769D74 /* LaunchScreen.storyboard in Resources */,
 				8537521F28A6436D00769D74 /* Assets.xcassets in Resources */,
 				8537521D28A6436C00769D74 /* Weather.storyboard in Resources */,
+				8524856E28A7A6BD00222961 /* NotoSansKR-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +362,7 @@
 				DEVELOPMENT_TEAM = 3K4KWAG7KD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "날씨일기장";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Weather;
@@ -376,6 +393,7 @@
 				DEVELOPMENT_TEAM = 3K4KWAG7KD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "날씨일기장";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Weather;

@@ -26,6 +26,7 @@
 		8552634B28A7E3C80048C9D4 /* DiaryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */; };
 		8552634D28A7E3D80048C9D4 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634C28A7E3D80048C9D4 /* StoryboardName.swift */; };
 		8552634F28A7E42F0048C9D4 /* DiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634E28A7E42F0048C9D4 /* DiaryListViewController.swift */; };
+		8552635228A7E48B0048C9D4 /* ReusableViewProtocolswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552635128A7E48B0048C9D4 /* ReusableViewProtocolswift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryList.storyboard; sourceTree = "<group>"; };
 		8552634C28A7E3D80048C9D4 /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
 		8552634E28A7E42F0048C9D4 /* DiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewController.swift; sourceTree = "<group>"; };
+		8552635128A7E48B0048C9D4 /* ReusableViewProtocolswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocolswift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		8552635028A7E4460048C9D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				8552635128A7E48B0048C9D4 /* ReusableViewProtocolswift.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8524856128A78E3C00222961 /* EndPoint.swift in Sources */,
+				8552635228A7E48B0048C9D4 /* ReusableViewProtocolswift.swift in Sources */,
 				8524856A28A7915700222961 /* OpenWeatherMapAPIManager.swift in Sources */,
 				8537521628A6436C00769D74 /* AppDelegate.swift in Sources */,
 				8524855E28A7889E00222961 /* WeatherViewController.swift in Sources */,

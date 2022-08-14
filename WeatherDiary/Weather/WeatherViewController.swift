@@ -38,11 +38,23 @@ class WeatherViewController: UIViewController {
     }
     
     @objc func saveButtonClicked() {
-        print(#function)
+//        print(#function)
         let sb = UIStoryboard(name: StoryboardName.DiaryList.rawValue, bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: DiaryListViewController.reuseIdentifier) as? DiaryListViewController else { return }
         
-        self.navigationController?.popViewController(animated: true)
+        if diaryTextView.text.isEmpty || diaryTextView.text == "오늘의 일기를 적어주세요" {
+            showSaveWarningAlert()
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func showSaveWarningAlert() {
+        let alert = UIAlertController(title: "주의", message: "오늘의 일기를 적은 후 저장해주세요.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
 }
 

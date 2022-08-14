@@ -22,6 +22,8 @@
 		8537521F28A6436D00769D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8537521E28A6436D00769D74 /* Assets.xcassets */; };
 		8537522228A6436D00769D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8537522028A6436D00769D74 /* LaunchScreen.storyboard */; };
 		8537522A28A6449700769D74 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8537522928A6449700769D74 /* Documentation.docc */; };
+		85442B4A28A8D00000891332 /* WritingDiary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85442B4928A8D00000891332 /* WritingDiary.storyboard */; };
+		85442B4C28A8D01900891332 /* WritingDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */; };
 		8552634828A7E2670048C9D4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634728A7E2670048C9D4 /* Font.swift */; };
 		8552634B28A7E3C80048C9D4 /* DiaryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */; };
 		8552634D28A7E3D80048C9D4 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634C28A7E3D80048C9D4 /* StoryboardName.swift */; };
@@ -49,6 +51,8 @@
 		8537522128A6436D00769D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8537522328A6436D00769D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8537522928A6449700769D74 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		85442B4928A8D00000891332 /* WritingDiary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WritingDiary.storyboard; sourceTree = "<group>"; };
+		85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDiaryViewController.swift; sourceTree = "<group>"; };
 		8552634728A7E2670048C9D4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryList.storyboard; sourceTree = "<group>"; };
 		8552634C28A7E3D80048C9D4 /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		8537521428A6436C00769D74 /* WeatherDiary */ = {
 			isa = PBXGroup;
 			children = (
+				85442B4828A8CFDB00891332 /* WritingDiary */,
 				8552635F28A7F0890048C9D4 /* Manager */,
 				8552635328A7E77D0048C9D4 /* View */,
 				8552635028A7E4460048C9D4 /* Protocol */,
@@ -144,6 +149,15 @@
 				8537522328A6436D00769D74 /* Info.plist */,
 			);
 			path = WeatherDiary;
+			sourceTree = "<group>";
+		};
+		85442B4828A8CFDB00891332 /* WritingDiary */ = {
+			isa = PBXGroup;
+			children = (
+				85442B4928A8D00000891332 /* WritingDiary.storyboard */,
+				85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */,
+			);
+			path = WritingDiary;
 			sourceTree = "<group>";
 		};
 		8552634628A7E24B0048C9D4 /* Model */ = {
@@ -270,6 +284,7 @@
 				8552634B28A7E3C80048C9D4 /* DiaryList.storyboard in Resources */,
 				8537522228A6436D00769D74 /* LaunchScreen.storyboard in Resources */,
 				8552635D28A7E7D60048C9D4 /* DiaryListCollectionViewCell.xib in Resources */,
+				85442B4A28A8D00000891332 /* WritingDiary.storyboard in Resources */,
 				8537521F28A6436D00769D74 /* Assets.xcassets in Resources */,
 				8537521D28A6436C00769D74 /* Weather.storyboard in Resources */,
 				8524856E28A7A6BD00222961 /* NotoSansKR-Bold.otf in Resources */,
@@ -284,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8552635C28A7E7D60048C9D4 /* DiaryListCollectionViewCell.swift in Sources */,
+				85442B4C28A8D01900891332 /* WritingDiaryViewController.swift in Sources */,
 				8524856128A78E3C00222961 /* EndPoint.swift in Sources */,
 				8552635228A7E48B0048C9D4 /* ReusableViewProtocolswift.swift in Sources */,
 				8524856A28A7915700222961 /* OpenWeatherMapAPIManager.swift in Sources */,

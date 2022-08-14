@@ -30,7 +30,7 @@ class DiaryListViewController: UIViewController {
 
 extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DiaryDataManager.shared.diaryList.count + 1
+        return DiaryDataManager.shared.diaryList.count == 0 ? 1 : DiaryDataManager.shared.diaryList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

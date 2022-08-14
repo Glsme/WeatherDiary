@@ -17,22 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날씨 일기장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzw-uT-Ean">
-                                <rect key="frame" x="168" y="437.5" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzw-uT-Ean">
+                                <rect key="frame" x="50" y="393" width="314" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="juX-Ha-YIh">
+                                <rect key="frame" x="103.5" y="136" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="juX-Ha-YIh" secondAttribute="height" id="BbB-cJ-1Wf"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-sU-hq9">
+                                <rect key="frame" x="40" y="463.5" width="334" height="378.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rDp-sU-hq9" secondAttribute="trailing" constant="40" id="4A0-pV-tLl"/>
+                            <constraint firstItem="juX-Ha-YIh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AEc-pN-ftm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rDp-sU-hq9" secondAttribute="bottom" constant="20" id="CFN-wr-Myx"/>
+                            <constraint firstItem="rDp-sU-hq9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I6D-JK-KtO"/>
+                            <constraint firstItem="zzw-uT-Ean" firstAttribute="top" secondItem="juX-Ha-YIh" secondAttribute="bottom" constant="50" id="Jw6-6e-d6j"/>
                             <constraint firstItem="zzw-uT-Ean" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Klv-yA-hiO"/>
-                            <constraint firstItem="zzw-uT-Ean" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XWv-NA-Fan"/>
+                            <constraint firstItem="zzw-uT-Ean" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="XWv-NA-Fan"/>
+                            <constraint firstItem="rDp-sU-hq9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="bpH-Yc-E0m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="zzw-uT-Ean" secondAttribute="trailing" constant="50" id="frU-4v-NNA"/>
+                            <constraint firstItem="juX-Ha-YIh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="p70-Qk-Ua7"/>
+                            <constraint firstItem="rDp-sU-hq9" firstAttribute="top" secondItem="zzw-uT-Ean" secondAttribute="bottom" constant="50" id="ze4-FH-DdH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="zzw-uT-Ean" id="ESD-YN-9o2"/>
+                        <outlet property="descriptionLabel" destination="zzw-uT-Ean" id="ESD-YN-9o2"/>
+                        <outlet property="iconImageView" destination="juX-Ha-YIh" id="hFE-mu-0Oi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -41,6 +65,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

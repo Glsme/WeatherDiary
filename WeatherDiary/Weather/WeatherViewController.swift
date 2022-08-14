@@ -11,8 +11,9 @@ import CoreLocation
 class WeatherViewController: UIViewController {
     
     let locationManager = CLLocationManager()
-
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class WeatherViewController: UIViewController {
         locationManager.delegate = self
         checkUserDeviceLocationServiceAuthorization()
         
-        label.font = UIFont(name: Font.NotoSansMedium, size: 20)
+        descriptionLabel.font = UIFont(name: Font.NotoSansMedium, size: 16)
         
 //        OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: 37.592682, lon: 127.016479)
     }
@@ -58,7 +59,10 @@ extension WeatherViewController {
             let latitude = locationManager.location?.coordinate.latitude
             let longtitude = locationManager.location?.coordinate.longitude
 //            print(latitude)
-            OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: latitude!, lon: longtitude!)
+            OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: latitude!, lon: longtitude!) { text in
+                self.descriptionLabel.text = text
+            }
+//            descriptionLabel.text = "\(DiaryDataManager.shared.diaryList.last?.temp)"
         default:
             print("DEFAULT")
         }

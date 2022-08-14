@@ -24,6 +24,7 @@
 		8537522A28A6449700769D74 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8537522928A6449700769D74 /* Documentation.docc */; };
 		85442B4A28A8D00000891332 /* WritingDiary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85442B4928A8D00000891332 /* WritingDiary.storyboard */; };
 		85442B4C28A8D01900891332 /* WritingDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */; };
+		85442B4E28A92F6500891332 /* WeatherDescKo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85442B4D28A92F6500891332 /* WeatherDescKo.swift */; };
 		8552634828A7E2670048C9D4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634728A7E2670048C9D4 /* Font.swift */; };
 		8552634B28A7E3C80048C9D4 /* DiaryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */; };
 		8552634D28A7E3D80048C9D4 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634C28A7E3D80048C9D4 /* StoryboardName.swift */; };
@@ -53,6 +54,7 @@
 		8537522928A6449700769D74 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		85442B4928A8D00000891332 /* WritingDiary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WritingDiary.storyboard; sourceTree = "<group>"; };
 		85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDiaryViewController.swift; sourceTree = "<group>"; };
+		85442B4D28A92F6500891332 /* WeatherDescKo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDescKo.swift; sourceTree = "<group>"; };
 		8552634728A7E2670048C9D4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryList.storyboard; sourceTree = "<group>"; };
 		8552634C28A7E3D80048C9D4 /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				8552634728A7E2670048C9D4 /* Font.swift */,
 				8552634C28A7E3D80048C9D4 /* StoryboardName.swift */,
 				8552636328A7F10E0048C9D4 /* DiaryModel.swift */,
+				85442B4D28A92F6500891332 /* WeatherDescKo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				8524856A28A7915700222961 /* OpenWeatherMapAPIManager.swift in Sources */,
 				8537521628A6436C00769D74 /* AppDelegate.swift in Sources */,
 				8524855E28A7889E00222961 /* WeatherViewController.swift in Sources */,
+				85442B4E28A92F6500891332 /* WeatherDescKo.swift in Sources */,
 				8552636228A7F0AF0048C9D4 /* DiaryDataManager.swift in Sources */,
 				8552634828A7E2670048C9D4 /* Font.swift in Sources */,
 				8537521828A6436C00769D74 /* SceneDelegate.swift in Sources */,

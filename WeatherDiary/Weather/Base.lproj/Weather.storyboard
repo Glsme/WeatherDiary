@@ -55,6 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="zzw-uT-Ean" id="ESD-YN-9o2"/>
+                        <outlet property="diaryTextView" destination="rDp-sU-hq9" id="k6V-8v-oXf"/>
                         <outlet property="iconImageView" destination="juX-Ha-YIh" id="hFE-mu-0Oi"/>
                     </connections>
                 </viewController>

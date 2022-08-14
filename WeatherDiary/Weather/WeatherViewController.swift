@@ -16,6 +16,7 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var diaryTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,32 @@ class WeatherViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         
+        diaryTextView.delegate = self
+        diaryTextView.font = UIFont(name: Font.NotoSansMedium, size: 13)
+        setTextViewPlaceHolder()
+        
 //        OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: 37.592682, lon: 127.016479)
+    }
+}
+
+extension WeatherViewController: UITextViewDelegate {
+    func setTextViewPlaceHolder() {
+        diaryTextView.text = "오늘의 일기를 적어주세요"
+        diaryTextView.textColor = UIColor.lightGray
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "오늘의 일기를 적어주세요"
+            textView.textColor = UIColor.lightGray
+        }
     }
 }
 

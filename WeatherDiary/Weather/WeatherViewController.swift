@@ -26,6 +26,9 @@ class WeatherViewController: UIViewController {
         descriptionLabel.font = UIFont(name: Font.NotoSansMedium, size: 16)
         view.backgroundColor = UIColor.weatherBGColor
         
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        
 //        OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: 37.592682, lon: 127.016479)
     }
 }

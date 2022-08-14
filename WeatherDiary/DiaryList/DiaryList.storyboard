@@ -50,6 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ReZ-3N-GyE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KSY-kj-0KB">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addDiaryButtonClicked:" destination="Y6W-OH-hqX" id="J5D-rz-XdS"/>
                             </connections>

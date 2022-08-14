@@ -20,6 +20,12 @@ class DiaryListViewController: UIViewController {
         diaryListCollectionView.collectionViewLayout = collectionViewLayout()
     }
 
+    @IBAction func addDiaryButtonClicked(_ sender: UIBarButtonItem) {
+        let sb = UIStoryboard(name: StoryboardName.Weather.rawValue, bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: WeatherViewController.reuseIdentifier) as? WeatherViewController else { return }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -28,6 +34,7 @@ extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiaryListCollectionViewCell.reuseIdentifier, for: indexPath) as? DiaryListCollectionViewCell else { return UICollectionViewCell() }
         
         return cell

@@ -24,6 +24,7 @@ class WeatherViewController: UIViewController {
         checkUserDeviceLocationServiceAuthorization()
         
         descriptionLabel.font = UIFont(name: Font.NotoSansMedium, size: 16)
+        view.backgroundColor = UIColor.weatherBGColor
         
 //        OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: 37.592682, lon: 127.016479)
     }

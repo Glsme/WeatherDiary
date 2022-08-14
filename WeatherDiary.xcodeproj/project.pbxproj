@@ -25,6 +25,7 @@
 		85442B4A28A8D00000891332 /* WritingDiary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85442B4928A8D00000891332 /* WritingDiary.storyboard */; };
 		85442B4C28A8D01900891332 /* WritingDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */; };
 		85442B5128A9381A00891332 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 85442B5028A9381A00891332 /* Kingfisher */; };
+		85442B5428A93AB600891332 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85442B5328A93AB600891332 /* UIColor+Extension.swift */; };
 		8552634828A7E2670048C9D4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634728A7E2670048C9D4 /* Font.swift */; };
 		8552634B28A7E3C80048C9D4 /* DiaryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */; };
 		8552634D28A7E3D80048C9D4 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634C28A7E3D80048C9D4 /* StoryboardName.swift */; };
@@ -54,6 +55,7 @@
 		8537522928A6449700769D74 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		85442B4928A8D00000891332 /* WritingDiary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WritingDiary.storyboard; sourceTree = "<group>"; };
 		85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingDiaryViewController.swift; sourceTree = "<group>"; };
+		85442B5328A93AB600891332 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8552634728A7E2670048C9D4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryList.storyboard; sourceTree = "<group>"; };
 		8552634C28A7E3D80048C9D4 /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		8537521428A6436C00769D74 /* WeatherDiary */ = {
 			isa = PBXGroup;
 			children = (
+				85442B5228A93A9E00891332 /* Extension */,
 				85442B4828A8CFDB00891332 /* WritingDiary */,
 				8552635F28A7F0890048C9D4 /* Manager */,
 				8552635328A7E77D0048C9D4 /* View */,
@@ -160,6 +163,14 @@
 				85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */,
 			);
 			path = WritingDiary;
+			sourceTree = "<group>";
+		};
+		85442B5228A93A9E00891332 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				85442B5328A93AB600891332 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8552634628A7E24B0048C9D4 /* Model */ = {
@@ -309,6 +320,7 @@
 				8524856A28A7915700222961 /* OpenWeatherMapAPIManager.swift in Sources */,
 				8537521628A6436C00769D74 /* AppDelegate.swift in Sources */,
 				8524855E28A7889E00222961 /* WeatherViewController.swift in Sources */,
+				85442B5428A93AB600891332 /* UIColor+Extension.swift in Sources */,
 				8552636228A7F0AF0048C9D4 /* DiaryDataManager.swift in Sources */,
 				8552634828A7E2670048C9D4 /* Font.swift in Sources */,
 				8537521828A6436C00769D74 /* SceneDelegate.swift in Sources */,

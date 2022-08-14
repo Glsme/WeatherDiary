@@ -8,7 +8,7 @@
 import UIKit
 
 class DiaryListViewController: UIViewController {
-
+    
     @IBOutlet weak var diaryListCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class DiaryListViewController: UIViewController {
         diaryListCollectionView.collectionViewLayout = collectionViewLayout()
         diaryListCollectionView.backgroundColor = UIColor.weatherBGColor
     }
-
+    
     @IBAction func addDiaryButtonClicked(_ sender: UIBarButtonItem) {
         let sb = UIStoryboard(name: StoryboardName.Weather.rawValue, bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: WeatherViewController.reuseIdentifier) as? WeatherViewController else { return }
@@ -33,7 +33,7 @@ class DiaryListViewController: UIViewController {
 
 extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DiaryDataManager.shared.diaryList.count == 0 ? 1 : DiaryDataManager.shared.diaryList.count
+        return DiaryDataManager.shared.diaryList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

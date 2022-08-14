@@ -8,7 +8,7 @@
 import UIKit
 
 class DiaryListCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var backView: UIView!
     
     override func awakeFromNib() {
@@ -22,5 +22,5 @@ class DiaryListCollectionViewCell: UICollectionViewCell {
         backView.layer.cornerRadius = 10
         backView.backgroundColor = UIColor.weatherCollectionColor
     }
-
+    
 }

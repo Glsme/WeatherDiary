@@ -26,6 +26,7 @@
 		85442B4C28A8D01900891332 /* WritingDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85442B4B28A8D01900891332 /* WritingDiaryViewController.swift */; };
 		85442B5128A9381A00891332 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 85442B5028A9381A00891332 /* Kingfisher */; };
 		85442B5428A93AB600891332 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85442B5328A93AB600891332 /* UIColor+Extension.swift */; };
+		85442B5728A9440B00891332 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85442B5628A9440B00891332 /* IQKeyboardManagerSwift */; };
 		8552634828A7E2670048C9D4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634728A7E2670048C9D4 /* Font.swift */; };
 		8552634B28A7E3C80048C9D4 /* DiaryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8552634A28A7E3C80048C9D4 /* DiaryList.storyboard */; };
 		8552634D28A7E3D80048C9D4 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8552634C28A7E3D80048C9D4 /* StoryboardName.swift */; };
@@ -73,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85442B5128A9381A00891332 /* Kingfisher in Frameworks */,
+				85442B5728A9440B00891332 /* IQKeyboardManagerSwift in Frameworks */,
 				8524856728A78F6900222961 /* SwiftyJSON in Frameworks */,
 				8524856428A78F4E00222961 /* Alamofire in Frameworks */,
 			);
@@ -246,6 +248,7 @@
 				8524856328A78F4E00222961 /* Alamofire */,
 				8524856628A78F6900222961 /* SwiftyJSON */,
 				85442B5028A9381A00891332 /* Kingfisher */,
+				85442B5628A9440B00891332 /* IQKeyboardManagerSwift */,
 			);
 			productName = WeatherDiary;
 			productReference = 8537521228A6436C00769D74 /* WeatherDiary.app */;
@@ -279,6 +282,7 @@
 				8524856228A78F4E00222961 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8524856528A78F6900222961 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				85442B4F28A9381A00891332 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				85442B5528A9440B00891332 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 8537521328A6436C00769D74 /* Products */;
 			projectDirPath = "";
@@ -578,6 +582,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		85442B5528A9440B00891332 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -595,6 +607,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 85442B4F28A9381A00891332 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		85442B5628A9440B00891332 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85442B5528A9440B00891332 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

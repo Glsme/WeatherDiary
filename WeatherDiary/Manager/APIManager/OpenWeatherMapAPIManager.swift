@@ -29,12 +29,13 @@ class OpenWeatherMapAPIManager {
                 let humidity = json["main"]["humidity"].intValue
                 let icon = json["weather"][0]["icon"].stringValue
                 let id = json["weather"][0]["id"].intValue
+                let weather = self.weatherDescKo[id] ?? "날씨"
 //                for item in json["weather"].arrayValue {
 //                    print(item["icon"].stringValue)
 //                }
                 
-                let description = "현재 온도는 \(temp)℃이고,\n습도는 \(humidity)%이며,\n날씨 키워드는 \(self.weatherDescKo[id] ?? "날씨")입니다."
-                DiaryDataManager.shared.diaryList.append(DiaryModel(text: description, icon: icon))
+                let description = "현재 온도는 \(temp)℃이고,\n습도는 \(humidity)%이며,\n날씨 키워드는 \(weather)입니다."
+                DiaryDataManager.shared.diaryList.append(DiaryModel(temp: temp, humidity: humidity, weather: weather, text: description, icon: icon))
                 
                 
                 complitionHandler(description, icon)

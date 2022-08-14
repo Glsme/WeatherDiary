@@ -8,6 +8,9 @@
 import Foundation
 
 struct DiaryModel {
+    let temp: Int
+    let humidity: Int
+    let weather: String
     let text: String
     let icon: String
 }

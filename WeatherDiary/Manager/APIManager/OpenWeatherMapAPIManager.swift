@@ -15,9 +15,9 @@ class OpenWeatherMapAPIManager {
     
     private init() { }
     
-    func requestCurrentWeatherData(lat: Double, lon: Double, complitionHandler: @escaping (String) -> () ) {
+    func requestCurrentWeatherData(lat: Double, lon: Double, complitionHandler: @escaping (String, String) -> () ) {
         //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-        let url = "\(EndPoint.currentWeatherData)lat=\(lat)&lon=\(lon)&appid=\(APIKey.OPENWEATHER)"
+        let url = "\(EndPoint.currentWeatherDataURL)lat=\(lat)&lon=\(lon)&appid=\(APIKey.OPENWEATHER)"
         
         AF.request(url, method: .get).validate(statusCode: 200...500).responseData { response in
             switch response.result {
@@ -33,10 +33,11 @@ class OpenWeatherMapAPIManager {
 //                    print(item["icon"].stringValue)
 //                }
                 
-                DiaryDataManager.shared.diaryList.append(DiaryModel(temp: temp, humidity: humidity, icon: icon))
                 let description = "현재 온도는 \(temp)℃이고,\n습도는 \(humidity)%이며,\n날씨 키워드는 \(self.weatherDescKo[id] ?? "날씨")입니다."
+                DiaryDataManager.shared.diaryList.append(DiaryModel(text: description, icon: icon))
                 
-                complitionHandler(description)
+                
+                complitionHandler(description, icon)
                 
             case .failure(let error):
                 print(error)

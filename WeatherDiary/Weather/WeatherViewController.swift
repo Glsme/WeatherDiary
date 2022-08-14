@@ -8,11 +8,13 @@
 import UIKit
 import CoreLocation
 
+import Kingfisher
+
 class WeatherViewController: UIViewController {
     
     let locationManager = CLLocationManager()
-    @IBOutlet weak var iconImageView: UIImageView!
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
@@ -59,8 +61,10 @@ extension WeatherViewController {
             let latitude = locationManager.location?.coordinate.latitude
             let longtitude = locationManager.location?.coordinate.longitude
 //            print(latitude)
-            OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: latitude!, lon: longtitude!) { text in
+            OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: latitude!, lon: longtitude!) { text, icon in
                 self.descriptionLabel.text = text
+                let url = "https://openweathermap.org/img/wn/\(icon)@2x.png"
+                self.iconImageView.kf.setImage(with: URL(string: url))
             }
 //            descriptionLabel.text = "\(DiaryDataManager.shared.diaryList.last?.temp)"
         default:

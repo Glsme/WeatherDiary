@@ -29,12 +29,20 @@ class WeatherViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .done, target: self, action: #selector(saveButtonClicked))
         
         diaryTextView.delegate = self
         diaryTextView.font = UIFont(name: Font.NotoSansMedium, size: 13)
         setTextViewPlaceHolder()
         
-//        OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: 37.592682, lon: 127.016479)
+    }
+    
+    @objc func saveButtonClicked() {
+        print(#function)
+        let sb = UIStoryboard(name: StoryboardName.DiaryList.rawValue, bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: DiaryListViewController.reuseIdentifier) as? DiaryListViewController else { return }
+        
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

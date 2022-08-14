@@ -9,4 +9,5 @@ import UIKit
 
 extension UIColor {
     static let weatherBGColor = UIColor(red: 255/255, green: 238/255, blue: 245/255, alpha: 1)
+    static let weatherCollectionColor = UIColor(red: 255/255, green: 185/255, blue: 245/255, alpha: 1)
 }

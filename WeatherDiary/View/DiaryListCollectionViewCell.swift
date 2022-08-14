@@ -20,6 +20,7 @@ class DiaryListCollectionViewCell: UICollectionViewCell {
     
     func setUI() {
         backView.layer.cornerRadius = 10
+        backView.backgroundColor = UIColor.weatherCollectionColor
     }
 
 }

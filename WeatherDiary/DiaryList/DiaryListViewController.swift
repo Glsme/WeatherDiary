@@ -14,10 +14,13 @@ class DiaryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.weatherBGColor
+        
         diaryListCollectionView.delegate = self
         diaryListCollectionView.dataSource = self
         diaryListCollectionView.register(UINib(nibName: DiaryListCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: DiaryListCollectionViewCell.reuseIdentifier)
         diaryListCollectionView.collectionViewLayout = collectionViewLayout()
+        diaryListCollectionView.backgroundColor = UIColor.weatherBGColor
     }
 
     @IBAction func addDiaryButtonClicked(_ sender: UIBarButtonItem) {

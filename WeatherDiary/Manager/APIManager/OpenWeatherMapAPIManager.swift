@@ -15,6 +15,8 @@ class OpenWeatherMapAPIManager {
     
     private init() { }
     
+    let dateFormatter = DateFormatter()
+    
     func requestCurrentWeatherData(lat: Double, lon: Double, complitionHandler: @escaping (String, String) -> () ) {
         //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
         let url = "\(EndPoint.currentWeatherDataURL)lat=\(lat)&lon=\(lon)&appid=\(APIKey.OPENWEATHER)"
@@ -34,8 +36,11 @@ class OpenWeatherMapAPIManager {
 //                    print(item["icon"].stringValue)
 //                }
                 
+                self.dateFormatter.dateFormat = "yyyy-MM-dd"
+                let date = self.dateFormatter.string(from: Date())
+                
                 let description = "현재 온도는 \(temp)℃이고,\n습도는 \(humidity)%이며,\n날씨 키워드는 \(weather)입니다."
-                DiaryDataManager.shared.diaryList.append(DiaryModel(temp: temp, humidity: humidity, weather: weather, text: description, icon: icon))
+                DiaryDataManager.shared.diaryList.append(DiaryModel(temp: temp, humidity: humidity, weather: weather, text: description, icon: icon, date: date))
                 
                 
                 complitionHandler(description, icon)

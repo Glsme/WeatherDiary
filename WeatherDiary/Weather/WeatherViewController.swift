@@ -41,6 +41,7 @@ class WeatherViewController: UIViewController {
 //        print(#function)
         let sb = UIStoryboard(name: StoryboardName.DiaryList.rawValue, bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: DiaryListViewController.reuseIdentifier) as? DiaryListViewController else { return }
+        UserDefaults.standard.set(DiaryDataManager.shared.diaryList, forKey: "diaryList")
         
         if diaryTextView.text.isEmpty || diaryTextView.text == "오늘의 일기를 적어주세요" {
             showSaveWarningAlert()

@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Kingfisher
+
 class DiaryListViewController: UIViewController {
     
     @IBOutlet weak var diaryListCollectionView: UICollectionView!
@@ -39,6 +41,11 @@ extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiaryListCollectionViewCell.reuseIdentifier, for: indexPath) as? DiaryListCollectionViewCell else { return UICollectionViewCell() }
+        
+        let url = "https://openweathermap.org/img/wn/\(DiaryDataManager.shared.diaryList[indexPath.row].icon)@2x.png"
+        cell.iconImageView.kf.setImage(with: URL(string: url))
+        cell.weatherLabel.text = DiaryDataManager.shared.diaryList[indexPath.row].weather
+        cell.dateLabel.text = DiaryDataManager.shared.diaryList[indexPath.row].date
         
         return cell
     }

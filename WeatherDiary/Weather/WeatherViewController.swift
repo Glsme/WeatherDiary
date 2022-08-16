@@ -46,7 +46,7 @@ class WeatherViewController: UIViewController {
         guard let vc = sb.instantiateViewController(withIdentifier: DiaryListViewController.reuseIdentifier) as? DiaryListViewController else { return }
         UserDefaults.standard.set(DiaryDataManager.shared.diaryList, forKey: "diaryList")
         
-        if diaryTextView.text.isEmpty || diaryTextView.text == "오늘의 일기를 적어주세요" {
+        if diaryTextView.text.isEmpty || diaryTextView.text == "오늘의 당신의 하루는 어땠나요?" {
             showSaveWarningAlert()
         } else {
 //            DiaryDataManager.shared.diaryList.last?.diary = diaryTextView.text
@@ -67,7 +67,7 @@ class WeatherViewController: UIViewController {
 
 extension WeatherViewController: UITextViewDelegate {
     func setTextViewPlaceHolder() {
-        diaryTextView.text = "오늘의 일기를 적어주세요"
+        diaryTextView.text = "오늘의 당신의 하루는 어땠나요?"
         diaryTextView.textColor = UIColor.lightGray
     }
     
@@ -80,7 +80,7 @@ extension WeatherViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "오늘의 일기를 적어주세요"
+            textView.text = "오늘의 당신의 하루는 어땠나요?"
             textView.textColor = UIColor.lightGray
         }
     }

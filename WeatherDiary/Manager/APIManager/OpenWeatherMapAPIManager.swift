@@ -17,7 +17,7 @@ class OpenWeatherMapAPIManager {
     
     let dateFormatter = DateFormatter()
     
-    func requestCurrentWeatherData(lat: Double, lon: Double, complitionHandler: @escaping (String, String) -> () ) {
+    func requestCurrentWeatherData(lat: Double, lon: Double, complitionHandler: @escaping (String, String, String) -> () ) {
         //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
         let url = "\(EndPoint.currentWeatherDataURL)lat=\(lat)&lon=\(lon)&appid=\(APIKey.OPENWEATHER)"
         
@@ -28,6 +28,7 @@ class OpenWeatherMapAPIManager {
                 print(json)
                 
                 let temp = Int(json["main"]["temp"].doubleValue - 273.15)
+                let name = self.city[json["name"].stringValue] ?? json["name"].stringValue
                 let humidity = json["main"]["humidity"].intValue
                 let icon = json["weather"][0]["icon"].stringValue
                 let id = json["weather"][0]["id"].intValue
@@ -40,16 +41,20 @@ class OpenWeatherMapAPIManager {
                 let date = self.dateFormatter.string(from: Date())
                 
                 let description = "현재 온도는 \(temp)℃이고,\n습도는 \(humidity)%이며,\n날씨 키워드는 \(weather)입니다."
-                DiaryDataManager.shared.diaryList.append(DiaryModel(temp: temp, humidity: humidity, weather: weather, text: description, icon: icon, date: date))
+                DiaryDataManager.shared.diaryList.append(DiaryModel(temp: temp, humidity: humidity, weather: weather, text: description, icon: icon, date: date, name: name, diary: nil))
                 
                 
-                complitionHandler(description, icon)
+                complitionHandler(name ,description, icon)
                 
             case .failure(let error):
                 print(error)
             }
         }
     }
+    
+    let city: [String: String] = [
+        "Seoul": "서울"
+    ]
     
     let weatherDescKo: [Int: String] = [
         201: "가벼운 비를 동반한 천둥구름",

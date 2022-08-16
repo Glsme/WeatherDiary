@@ -35,17 +35,17 @@ class DiaryListViewController: UIViewController {
 
 extension DiaryListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DiaryDataManager.shared.diaryList.count
+        return DiaryDataManager.shared.diaryList.count + 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiaryListCollectionViewCell.reuseIdentifier, for: indexPath) as? DiaryListCollectionViewCell else { return UICollectionViewCell() }
         
-        let url = "https://openweathermap.org/img/wn/\(DiaryDataManager.shared.diaryList[indexPath.row].icon)@2x.png"
-        cell.iconImageView.kf.setImage(with: URL(string: url))
-        cell.weatherLabel.text = DiaryDataManager.shared.diaryList[indexPath.row].weather
-        cell.dateLabel.text = DiaryDataManager.shared.diaryList[indexPath.row].date
+//        let url = "https://openweathermap.org/img/wn/\(DiaryDataManager.shared.diaryList[indexPath.row].icon)@2x.png"
+//        cell.iconImageView.kf.setImage(with: URL(string: url))
+//        cell.weatherLabel.text = DiaryDataManager.shared.diaryList[indexPath.row].weather
+//        cell.dateLabel.text = DiaryDataManager.shared.diaryList[indexPath.row].date
         
         return cell
     }

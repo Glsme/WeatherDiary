@@ -14,4 +14,6 @@ struct DiaryModel {
     let text: String
     let icon: String
     let date: String
+    let name: String
+    var diary: String?
 }

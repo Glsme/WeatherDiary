@@ -17,6 +17,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var diaryTextView: UITextView!
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class WeatherViewController: UIViewController {
         checkUserDeviceLocationServiceAuthorization()
         
         descriptionLabel.font = UIFont(name: Font.NotoSansMedium, size: 16)
+        locationLabel.font = UIFont(name: Font.NotoSansMedium, size: 18)
+        iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
         view.backgroundColor = UIColor.weatherBGColor
         
         self.navigationController?.navigationBar.tintColor = .black
@@ -46,6 +49,9 @@ class WeatherViewController: UIViewController {
         if diaryTextView.text.isEmpty || diaryTextView.text == "오늘의 일기를 적어주세요" {
             showSaveWarningAlert()
         } else {
+//            DiaryDataManager.shared.diaryList.last?.diary = diaryTextView.text
+            print(DiaryDataManager.shared.diaryList)
+//            vc.diaryListCollectionView.reloadData()
             self.navigationController?.popViewController(animated: true)
         }
     }
@@ -112,7 +118,8 @@ extension WeatherViewController {
             let latitude = locationManager.location?.coordinate.latitude
             let longtitude = locationManager.location?.coordinate.longitude
 //            print(latitude)
-            OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: latitude!, lon: longtitude!) { text, icon in
+            OpenWeatherMapAPIManager.shared.requestCurrentWeatherData(lat: latitude!, lon: longtitude!) { name, text, icon in
+                self.locationLabel.text = name
                 self.descriptionLabel.text = text
                 let url = "https://openweathermap.org/img/wn/\(icon)@2x.png"
                 self.iconImageView.kf.setImage(with: URL(string: url))

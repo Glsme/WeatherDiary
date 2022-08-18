@@ -18,6 +18,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var diaryTextView: UITextView!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ class WeatherViewController: UIViewController {
         locationManager.delegate = self
         checkUserDeviceLocationServiceAuthorization()
         
-        descriptionLabel.font = UIFont(name: Font.NotoSansMedium, size: 16)
+        descriptionLabel.font = UIFont(name: Font.NotoSansMedium, size: 14)
         locationLabel.font = UIFont(name: Font.NotoSansMedium, size: 18)
         iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
         view.backgroundColor = UIColor.weatherBGColor
@@ -38,6 +40,12 @@ class WeatherViewController: UIViewController {
         diaryTextView.font = UIFont(name: Font.NotoSansMedium, size: 13)
         setTextViewPlaceHolder()
         
+        cameraButton.layer.cornerRadius = cameraButton.frame.height / 2
+        
+    }
+    
+    @IBAction func cameraButtonClicked(_ sender: UIButton) {
+        print(#function)
     }
     
     @objc func saveButtonClicked() {
